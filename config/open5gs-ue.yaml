@@ -79,3 +79,49 @@ ciphering:
 integrityMaxRate:
   uplink: 'full'
   downlink: 'full'
+
+# -----------------------
+# Additional Configuration
+# -----------------------
+
+# Device Capabilities
+ueCapabilities:
+  voice: true
+  video: true
+  messaging: true
+  dataSpeed: 'LTE-A'
+  supportedBands:
+    - 'n78'
+    - 'n41'
+
+# Quality of Service (QoS) Parameters
+qosProfile:
+  priority: 5
+  qci: 9
+  arp: 1
+  maxBitrate:
+    uplink: '50Mbps'
+    downlink: '100Mbps'
+
+# Extended Security Parameters
+security:
+  integrityAlgorithm: 'NIA2'
+  cipheringAlgorithm: 'NEA2'
+  encryptionKey: '00112233445566778899AABBCCDDEEFF'
+  keyLifetime: '24h'
+
+# Location Information
+location:
+  cellId: '12345'
+  trackingAreaCode: '234'
+  registrationArea: '56789'
+  positionInfo:
+    latitude: '37.7749'
+    longitude: '-122.4194'
+
+# Network Registration Details
+registration:
+  status: 'registered'
+  timestamp: '2025-02-14T10:00:00Z'
+  networkType: '5G'
+  roaming: false
